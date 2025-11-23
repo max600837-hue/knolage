@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<style>
+/* Black + Rose Gold Theme */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0d0d0d;
+    color: #fce7e7;
+    align-items: center;
+}
+
+/* Container for sidebar + main content */
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-direction: row;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 28px;
+    color: #f7d5c9;
+    text-shadow: 0 0 10px rgba(255,182,193,0.3);
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 15px;
+    color: #f7d5c9;
+    text-shadow: 0 0 10px rgba(255,182,193,0.3);
+    margin-bottom: 20px;
+}
+
+/* Card Section */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    width: 200px;
+    padding: 20px;
+    background: rgba(255,182,193,0.05);
+    border-radius: 14px;
+    border: 1px solid rgba(255,182,193,0.2);
+    text-align: center;
+    box-shadow: 0 0 12px rgba(255,182,193,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg,#f9c5bd,#d39e91);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(230, 169, 169, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-content">
+    <div id="buttonsSection">
+        <h2 class="section-title">Meeting Links</h2>
+        <div class="card-container">
+            <div class="card"><p>MSCS ACT & SOCIETY</p><button class="mscs">SEND</button></div>
+            <div class="card"><p>ABOUT SOCIETY</p><button class="about">SEND</button></div>
+            <div class="card"><p>CP ONLY</p><button class="cp">SEND</button></div>
+            <div class="card"><p>SECURITY</p><button class="security">SEND</button></div>
+            <div class="card"><p>SBP & ED</p><button class="sed">SEND</button></div>
+            <div class="card"><p>RD & MIP</p><button class="rm">SEND</button></div>
+            <div class="card"><p>FD & PBP</p><button class="fp">SEND</button></div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Array of phone numbers (include country code, e.g., 91 for India)
+
+// Function to send message to multiple numbers
+function sendToWhatsApp(message) {
+    phoneNumbers.forEach(number => {
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+    });
+}
+
+// Button click handlers
+document.querySelector('.mscs').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- MSCS ACT & Society related Discussion
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.about').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- Discussion About Our Society
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.cp').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- Technical & App Training (CP Only)
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.security').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- SECURITY PART
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.sed').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- Discussion About Sukanya & Education Plan (Product)
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.rm').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- Discussion About RD & MIP (Product)
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+
+document.querySelector('.fp').onclick = () => {
+    const msg = `Vibgyor Multi State Credit Co-operative Society
+
+Date:- Today
+    
+Meeting will start at ⏰9.00pm
+    
+Today Topic:- Discussion About FD & Pension Bachat Plan (Product)
+    
+Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
+    
+Join here: https://meet.google.com/tfe-jsqa-xke`;
+    sendToWhatsApp(msg);
+};
+</script>
+
+</body>
+</html>
