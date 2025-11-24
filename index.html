@@ -115,28 +115,24 @@ p {
 </div>
 
 <script>
-// Array of phone numbers (include country code, e.g., 91 for India)
-
-// Function to send message to multiple numbers
+// Function to send message to WhatsApp
 function sendToWhatsApp(message) {
-    phoneNumbers.forEach(number => {
-        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    });
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
 }
 
-// Button click handlers
+// Button Click Handlers
 document.querySelector('.mscs').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- MSCS ACT & Society related Discussion
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -145,13 +141,13 @@ document.querySelector('.about').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- Discussion About Our Society
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -160,13 +156,13 @@ document.querySelector('.cp').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- Technical & App Training (CP Only)
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -175,13 +171,13 @@ document.querySelector('.security').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- SECURITY PART
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -190,13 +186,13 @@ document.querySelector('.sed').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- Discussion About Sukanya & Education Plan (Product)
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -205,13 +201,13 @@ document.querySelector('.rm').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- Discussion About RD & MIP (Product)
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
@@ -220,17 +216,18 @@ document.querySelector('.fp').onclick = () => {
     const msg = `Vibgyor Multi State Credit Co-operative Society
 
 Date:- Today
-    
+
 Meeting will start at ⏰9.00pm
-    
+
 Today Topic:- Discussion About FD & Pension Bachat Plan (Product)
-    
+
 Presenter- Arindom Sanyal, Aloke Mondal and Narottam Raha
-    
+
 Join here: https://meet.google.com/tfe-jsqa-xke`;
     sendToWhatsApp(msg);
 };
 </script>
+
 
 </body>
 </html>
